@@ -1,0 +1,126 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    /* overflow-x: hidden; */
+    
+}
+a{
+    text-decoration:none;
+}
+.startBtn{
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    /* border:3px solid white !important; */
+}
+.menu-barBtn{
+    width:50px;
+    height:6px;
+    background:white;
+    border-radius:5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+}
+.menu-barBtn::before,
+.menu-barBtn::after{
+    content:'';
+    position:absolute;
+    width:50px;
+    height:6px;
+    background:white;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+}
+.menu-barBtn::before{
+    transform: translateY(-16px);
+}
+.menu-barBtn::after{
+    transform: translateY(16px);
+
+}
+/* animate */
+.startBtn.open .menu-barBtn{
+    transform: translateX(-50px);
+    background:transparent;
+    box-shadow:none;
+}
+.startBtn.open .menu-barBtn::before{
+    transform: rotate(45deg) translate(35px, -35px);
+}
+.startBtn.open .menu-barBtn::after{
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+.logout:hover{
+    background-color: red !important;
+}
+.carousel-item {
+    height: 320px !important;
+    /* background-image: url(../images/logo1.jpeg); */
+    background-position: cover !important;
+    background-attachment: local;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* width: 575px; */
+    background-size: 100%;
+}
+@media screen and (max-width: 600px) {
+    .carousel-item{
+        height:180px !important;
+    }
+}
+.image{
+    width: 92px;
+    height: 136px;
+    background-size: cover;
+    /* background-image: url(../images/logo1.jpeg); */
+    background-attachment: local;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right:20px; transition: all .3s ease-out;
+}
+.popularBooks:hover .image{
+    transform: scale(1.07);
+}
+.ArrivalCard:hover .New{
+    transform: scale(1.07);
+
+}
+.New, .ArrivalCard{
+    width:146px;
+    height:194px;
+}
+.Main{
+    width:308px;
+    height:540px;
+}
+.anotherImg{
+    width:308px;
+    height:408px
+}
+.AnotherOne .title , .newArrival .title{
+    margin-top:25px;
+}
+  /* .carousel-item img {
+      position: absolute !important;
+      top: 0!important;
+      left: 0!important;
+      min-height: 300px!important;
+  } */
+.navigation{
+    background-color: #1b242f;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 0%;
+    z-index: 400;
+    border-bottom: 4px solid #04c2c9;
+}
+.ArrivalCard{
+    margin-bottom: 37px !important;
+}
